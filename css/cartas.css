@@ -1,0 +1,355 @@
+/*CSS GRID*/ 
+* {
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  height: 100%;
+}
+body{
+  font-family: century gothic;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+.grid-container > * {
+  /*box-shadow: -1px 1px 7px 0px black;*/
+  padding: 20px;
+}
+.grid-container{
+  display: grid;
+  /*gap: 10px;*/
+  grid-template:
+    "header" auto
+    "navbar" 100px
+    "main" auto
+    "sidebar" 100px
+}
+@media screen and (min-width: 600px) {
+  .grid-container{
+    grid-template:
+      "header header" auto
+      "navbar navbar" 100px
+      "sidebar main" auto /
+      200px auto;
+  }
+} 
+@media screen and (min-width: 1050px) {
+  .grid-container{
+    grid-template:
+      "header header header" 90px
+      "navbar main sidebar" auto /
+      50px auto 50px;
+  }
+} 
+/*HEADER*/
+nav{
+  float: right;
+}
+.header img{
+  width: 150px;
+  height: 50px;
+}
+.header {
+  grid-area: header;
+  font-size: 31.2px;
+  background: #59a44e;
+  opacity: 0.9;
+   text-align: center;
+}
+/*CONTENIDO*/
+.main {
+  grid-area: main;
+  text-align: center;
+}
+.main h4{
+  font-weight: lighter;
+}
+.main h5{
+  color: black;
+  font-family: sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.control{
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 4px;
+  margin-top: 16px;
+  border: 1px solid black;
+  font-size: 16px;
+  color: black;
+}
+.botones ul{
+  color: black; 
+  margin: 0px;
+  overflow: hidden;
+}
+.botones > li{
+  float: left;
+  list-style: none;
+  margin-left: 144px;
+  padding-top: 10px;
+}
+.botones li a{
+  display: block;
+  box-shadow: 10px 15px 66px black;
+  color: black;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: small;
+  background-color: #acb29d; 
+}
+.botones li a:hover{
+  background-color: #64685c;
+  color: white;
+}
+.boton ul{
+  color: black; 
+  overflow: hidden;
+}
+.boton li{
+  list-style: none;
+}
+.boton li a{
+  box-shadow: 10px 15px 66px black;
+  color: white;
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #082c07;
+  opacity: 0.9;
+  float: left;
+  margin-top: 20%;
+}
+.boton li a:hover{
+  padding: 16px 16px;
+  background-color: #27AE60;
+  color: black;
+}
+/*SIDEBAR*/
+.sidebar *{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.sidebar{
+  position: fixed;
+  right: 0;
+  top: 200px;
+  z-index: 2000;
+}
+.sidebar ul{
+  list-style-type: none;
+}
+.sidebar ul li a{
+  box-shadow: 10px 15px 66px black;
+  display: inline-block;
+  color: white;
+  background: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  -transition: all 500ms; 
+}
+.sidebar ul li .icon-facebook{background: #3b5998;}
+.sidebar ul li .icon-instagram{background: #ba40da;}
+.sidebar ul li .icon-twitter{background: #00abf0;}
+.sidebar ul li .icon-youtube{background: #c4302b;}
+.sidebar ul li .icon-linkedin2{background: #0e76a8;}
+.sidebar ul li .icon-mail2{background: #666666;}
+.sidebar ul li a:hover{padding: 10px 30px; margin: 0px -30px;background: #4cb634;}
+/*MAIN*/
+/*form styles*/
+#msform {
+	width: 100%;
+	margin: 30px auto;
+	text-align: center;
+	position: relative;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 10px 15px 66px black;
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 40%;
+	margin: 0 30%;
+	/*stacking fieldsets above each other*/
+	position: absolute;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	color: #2C3E50;
+	font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+	width: 100px;
+	background: #27AE60;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px @secondary-color;
+}
+/*headings*/
+.fs-title {
+	font-size: 16px;
+	text-transform: uppercase;
+	color: @primary-color;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 14px;
+	color: #666;
+	margin-bottom: 5px;
+}
+.fs-subtitl {
+  font-weight: normal;
+  font-size: 14px;
+  color: #666;
+
+  text-align: left;
+}
+/*progressbar*/
+#progressbar {
+	width: 100%;
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+  margin: 0 0 30px 40%;
+}
+#progressbar li {
+	list-style-type: none;
+	color: black;
+	text-transform: uppercase;
+	font-size: 10px;
+	width: 10%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	display: block;
+	font-size: 10px;
+	color: black;
+	background: #27AE60;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: #27AE60;
+	position: absolute;
+	left: -50%;
+	top: 14px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: darkgreen;
+	color: white;
+}
+.help-block {
+  font-size: .8em;
+  color: #7c7c7c;
+  text-align: left;
+  margin-bottom: .5em;
+}
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+   float: left;
+  margin-top: 20%;
+}
+
+.btn-5 {
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  background: rgb(255,27,0);
+background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
+}
+.btn-5:hover {
+  color: #f0094a;
+  background: transparent;
+   box-shadow:none;
+}
+.btn-5:before,
+.btn-5:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #f0094a;
+  box-shadow:
+   -1px -1px 5px 0px #fff,
+   7px 7px 20px 0px #0003,
+   4px 4px 5px 0px #0002;
+  transition:400ms ease all;
+}
+.btn-5:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.btn-5:hover:before,
+.btn-5:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}

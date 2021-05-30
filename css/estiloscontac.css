@@ -1,0 +1,102 @@
+form {
+	width: 450px;
+	margin: auto;
+	background: rgba(0,0,0,0.1);
+	padding: 10px 20px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	border-radius: 7px;
+	border: inset;
+}
+
+h2{
+	color: black;
+	text-align: center;
+	margin: 0;
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+input, textarea{
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 7px;
+	box-sizing: border-box;
+	font-size: 17px;
+	border: inset;
+}
+
+textarea{
+	min-height: 100px;
+	max-height: 200px;
+	max-width: 100%;
+}
+
+#boton{
+	background: green;
+	color: black;
+	padding: 20px;
+}
+
+#boton:hover{
+	cursor: pointer;
+}
+
+@media (max-width: 480px){
+	form{
+		width: 100
+	}
+}
+
+.header {
+  grid-area: header;
+  font-size: 31.2px;
+  background: #59a44e;
+  opacity: 0.9; 
+  text-align: center;
+}
+	.header img{
+  width: 150px;
+  height: 50px;
+}
+
+h1{
+	color: black;
+	text-align: center;
+	margin: 0;
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+.botons{
+  width: 40%;
+  background: #27AE60;
+  border: none;
+  padding: 10px 10px;
+  color: white;
+  margin: 0px 10px;
+  font-size: 18px;
+}
+.boton ul{
+  color: black; 
+  overflow: hidden;
+ }
+.boton li{
+  list-style: none;
+  float: left;
+}
+.boton li a{
+  box-shadow: 10px 15px 66px black;
+  color: white;
+  text-align: center;
+  padding: 16px 24px;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #082c07;
+  opacity: 0.9;
+}
+.boton li a:hover{
+  padding: 16px 24px;
+  background-color: #27AE60;
+  color: black;
+}
+

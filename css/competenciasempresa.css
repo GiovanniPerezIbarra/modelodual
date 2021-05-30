@@ -1,0 +1,191 @@
+/*CSS GRID*/ 
+* {
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  height: 100%;
+}
+body{
+  font-family: century gothic;
+  min-height: 100%;
+}
+.grid-container > * {
+  /*box-shadow: -1px 1px 7px 0px black;*/
+  padding: 20px;
+}
+.grid-container{
+  display: grid;
+  /*gap: 10px;*/
+  grid-template:
+    "header" auto
+    "navbar" 100px
+    "main" auto
+    "sidebar" 100px;
+}
+@media  screen and (max-width: 20px) {
+  .grid-container{
+    grid-template:
+      "header header" auto
+      "navbar navbar" 100px
+      "sidebar main" auto /
+      200px auto;
+  }
+} 
+@media screen and (min-width: 1050px) {
+  .grid-container{
+    grid-template:
+      "header header header" 90px
+      "navbar main sidebar" auto /
+      100px auto 100px;
+  }
+} 
+/*HEADER*/
+nav{
+  float: right;
+}
+.header img{
+  width: 150px;
+  height: 50px;
+}
+.header {
+  grid-area: header;
+  font-size: 31.2px;
+  background: #59a44e;
+  opacity: 0.9;
+   text-align: center; 
+}
+/*CONTENIDO*/
+.main {
+  grid-area: main;
+  text-align: center;
+  font-weight: lighter;
+}
+.main h3{
+  font-weight: lighter;
+}
+.main h5{
+  font-weight: lighter;
+  margin: 25px 50px;
+  text-align: left;
+  font-size: 20px;
+}
+.main h6{
+  font-weight: lighter;
+  text-align: left;
+  margin: 25px 50px;
+  font-size: 16px;
+}
+::-webkit-input-placeholder { color: black; } 
+:-moz-placeholder { /* Firefox 18- */ color: black; } 
+::-moz-placeholder { /* Firefox 19+ */ color: black; } 
+:-ms-input-placeholder { color: black; }
+.formulario{
+  width: 500px;
+  height: 250px;
+  background-color: white;
+  padding: 20px;
+  margin: 30px auto;
+  border-radius: 0px;
+  color: black;
+  opacity: 0.9;
+  box-shadow: 10px 15px 33px black;
+}
+.formulario h3{
+  font-size: 22px;
+  color: black;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: lighter;
+}
+.formulario h4{
+  color: black;
+  margin: 10px 10px;
+  font-size: 16px;
+  font-weight: lighter;
+}
+.formulario a{
+  color: black;
+  text-decoration: none;
+}
+.formulario a:hover{
+  color: black;
+  text-decoration: underline;
+}
+.controls{
+  width: 90%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 0px;
+  margin: 10px;
+  font-size: 15px;
+  color: black;
+}
+.botons{
+  width: 40%;
+  background: #27AE60;
+  border: none;
+  padding: 10px 10px;
+  color: white;
+  margin: 0px 10px;
+  font-size: 18px;
+}
+.boton ul{
+  color: black; 
+  overflow: hidden;
+}
+.boton li{
+  list-style: none;
+  float: left;
+}
+.boton li a{
+  box-shadow: 10px 15px 66px black;
+  color: white;
+  text-align: center;
+  padding: 16px 24px;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #082c07;
+  opacity: 0.9;
+}
+.boton li a:hover{
+  padding: 16px 24px;
+  background-color: #27AE60;
+  color: black;
+}
+/*SIDEBAR*/
+.sidebar *{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.sidebar{
+  position: fixed;
+  right: 0;
+  top: 200px;
+  z-index: 2000;
+}
+.sidebar ul{
+  list-style-type: none;
+}
+.sidebar ul li a{
+  box-shadow: 10px 15px 66px black;
+  display: inline-block;
+  color: white;
+  background: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  -transition: all 500ms; 
+}
+.sidebar ul li .icon-facebook{background: #3b5998;}
+.sidebar ul li .icon-instagram{background: #ba40da;}
+.sidebar ul li .icon-twitter{background: #00abf0;}
+.sidebar ul li .icon-youtube{background: #c4302b;}
+.sidebar ul li .icon-linkedin2{background: #0e76a8;}
+.sidebar ul li .icon-mail2{background: #666666;}
+.sidebar ul li a:hover{padding: 10px 30px; margin: 0px -30px;background: #4cb634;}

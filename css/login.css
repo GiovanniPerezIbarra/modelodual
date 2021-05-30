@@ -1,0 +1,138 @@
+/*CSS GRID*/ 
+* {
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  height: 100%;
+}
+body{
+  font-family: century gothic;
+  min-height: 100%;
+}
+.grid-container > * {
+  /*box-shadow: -1px 1px 7px 0px black;*/
+  padding: 20px;
+}
+.grid-container{
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "header" auto
+    "navbar" 100px
+    "main" auto
+    "sidebar" 100px
+    "footer" 100px;
+}
+@media (min-width: 600px) {
+  .grid-container{
+    grid-template:
+      "header header" auto
+      "navbar navbar" 100px
+      "sidebar main" auto
+      "footer footer" 100px /
+      200px auto;
+  }
+} 
+@media (min-width: 1050px) {
+  .grid-container{
+    grid-template:
+      "header header header" 90px
+      "navbar main sidebar" auto
+      "footer footer footer" 90px /
+      200px auto 200px;
+  }
+} 
+/*HEADER*/
+nav{
+  float: right;
+}
+.header img{
+  width: 150px;
+  height: 50px;
+}
+.header {
+  padding-top: 20px;
+  grid-area: header;
+  font-size: 31.2px;
+  background: #59a44e;
+  opacity: 0.9; 
+}
+/*SIDEBAR*/
+.sidebar{
+  grid-area: sidebar;
+}
+/*CONTENIDO*/
+.main{
+  grid-area: main;
+  margin-top: 40px;
+  padding: 0px;
+}
+.main * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.sesion{
+  width: 400px;
+  background-color: #5a1c1c;
+  padding: 40px;
+  margin: auto;
+  border-radius: 10px;
+  color: white;
+  opacity: 0.9;
+  box-shadow: 10px 15px 33px black;
+}
+.sesion h4{
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.sesion h5{
+  text-align: center;
+  color: #cbc8c8;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+.controls{
+  width: 100%;
+  background-color: #5a1c1c;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: 1px solid #b33a3a;
+  font-size: 18px;
+  color: white;
+}
+.sesion a{
+  color: white;
+  text-decoration: none;
+}
+.sesion a:hover{
+  color: white;
+  text-decoration: underline;
+}
+.botons{
+  width: 100%;
+  background: #bd3434;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 20px 0;
+  font-size: 18px;
+}
+/*NAVBAR*/
+.navbar{
+  grid-area: navbar;
+}
+/*FOOTER*/
+.footer {
+  grid-area: footer;
+  background: #59a44e;
+  opacity: 0.9;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  position: fixed;
+}
